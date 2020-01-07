@@ -1,0 +1,30 @@
+{% extends 'customer/base.html' %}
+{% block 'container' %}
+
+<div class="container pt-2">
+    <div class="row pt-2 text-center">
+        <div class="col">
+            <h1>LOGIN</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="col">
+        <div class="col-8 ml-auto mr-auto border border-primary">
+            <form method="POST" action="#">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="em">Email address</label>
+                    <input type="email" class="form-control" id="em" placeholder="Enter Email" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="ps">Password</label>
+                    <input type="password" id="ps" class="form-control" placeholder="Enter Password" name="pass1" required>
+                </div>
+                <p><a href="#" style="color:dodgerblue">Forgot Password</a></p>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
